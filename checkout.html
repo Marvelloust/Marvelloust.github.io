@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="icon" href="images2/logo2img.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images2/logo2img.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.19.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Marvyfash</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="custom-container">
+        <main>
+            <nav class="navbar navbar-expand-lg bg-danger-subtle " aria-label="Thirteenth navbar example">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+                        <a class="navbar-brand col-md-3 me-0 font-weight-bold d-flex align-items-center" href="#">
+                            <img src="images2/logo2img.png" class="rounded-circle me-2" style="width: 30px; height: 25px;" alt="">
+                            <span class="d-none d-md-inline"><i>Marvyfash</i></span>
+                        </a>
+                        <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                            <li class="nav-item">
+                                <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#aboutSectionModal">About</button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#testimonialsSectionModal">Testimonials</button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn " data-bs-toggle="modal"
+                                    data-bs-target="#supportSectionModal">Services</button>
+                            </li>
+                        </ul>
+                        <div class="d-lg-flex col-lg-3 justify-content-lg-end align-items-center">
+                            <div class="me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="me-3">
+                                <button type="button" class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#userDetailsModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-person" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div>
+                                <span class="text-danger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bag-dash" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"></path>
+                                        <path
+                                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="badge bg-warning rounded-pill" id="cartBadge"
+                                    onclick="openCartModal()">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--About Modal-->
+            <div class="modal fade" id="aboutSectionModal" tabindex="-1" aria-labelledby="aboutSectionModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="aboutSectionModalLabel">About Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="about container-fluid" id="About">
+                            <div class="row about_main">
+                                <div class="col-lg-6 col-md-12 order-lg-2">
+                                    <div class="image">
+                                        <img src="images2/aboutimg3.png" class="img-fluid rounded" alt="Clothing Image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 about_text text-start order-lg-1 align-self-center">
+                                    <h1><span class="text-warning fs-1">About</span> Us</h1>
+                                    <h3 class="text-warning">Why Choose Us?</h3>
+                                    <p class="text-dark">
+                                        Discover the essence of style at Marvyfash, where quality meets fashion. Uncover the latest trends crafted from
+                                        premium materials, all while supporting local designers and embracing easy, affordable shopping.
+                                        Our diverse collection ranges from casual chic to elegant dresses, tailored to your unique style. Benefit from
+                                        our responsive customer support, eco-friendly practices, and strong community connections.
+                                        Marvyfash offers affordable elegance, partnering with trusted brands to ensure a wardrobe you can rely on. Make
+                                        Marvyfash your fashion haven – express your individuality and embark on a stylish journey with us.
+                                    </p>
+                                    <a href="#" class="btn btn-warning about_btn w-100">Shop Now</a>
+                                    <br>
+                                </div>
+                                </div>
+                                <hr class="bg-danger">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Services Modal-->
+            <div class="modal fade" id="supportSectionModal" tabindex="-1" aria-labelledby="supportSectionModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="supportSectionModalLabel">Services Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="container-fluid bg-secondary text-white py-5" id="Services">
+                            <div class="container">
+                                <h2 class="text-center mb-4">Our Services</h2>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card">
+                                            <img src="images2/shippingimg1.png" class="card-img-top" alt="Service 1">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Express Shipping</h5>
+                                                <p class="card-text">Get your favorite items delivered to your doorstep quickly with
+                                                    our express shipping service.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card">
+                                            <img src="images2/tailoringimg3.png" class="card-img-top" alt="Service 2">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tailoring Services</h5>
+                                                <p class="card-text">Customize your clothing to perfection with our expert tailoring
+                                                    services for the perfect fit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card">
+                                            <img src="images2/fashionimg1.png" class="card-img-top" alt="Service 3"><br>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Fashion Consultation</h5>
+                                                <p class="card-text">Consult with our fashion experts to stay on trend and discover
+                                                    your unique style and collections.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-danger">
+                        <div class="container-fluid mt-5">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="text-center p-5 pb-5">
+                                        <h2>For more information and support!</h2>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h4 class="text-start" style="font-size: 80px; font-family: 'Work Sans', sans-serif;">
+                                                Contact Us!</h4>
+                                            <p class="font-family-serif">Just fill out this form and we'll contact you asap, or give
+                                                us a call on +91-7383738373 | Working Hours: 9am - 5pm Monday - Sunday.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Form on the right side -->
+                                            <form>
+                                                <div class="row h-25 mb-3">
+                                                    <!-- First and Last Name -->
+                                                    <div class="col">
+                                                        <input type="text" class="form-control border-dark"
+                                                            placeholder="First Name">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="form-control border-dark" placeholder="Last Name">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <!-- Email -->
+                                                    <input type="email" class="form-control border-dark" placeholder="Email">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <!-- Contact -->
+                                                    <input type="tel" class="form-control border-dark" placeholder="Contact">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <!-- Comments -->
+                                                    <textarea class="form-control border-dark" rows="4"
+                                                        placeholder="Comments"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-warning w-25">Submit</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-danger">
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!--Testimonials Section-->
+            <div class="modal fade" id="testimonialsSectionModal" tabindex="-1" aria-labelledby="testimonialsSectionModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="testimonialsSectionModalLabel">Testimonials Section</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!--Customers Reviews-->
+                        <div class="container-fluid mt-5">
+                            <h2 class="text-center mb-4">Customer Testimonials</h2>
+            
+                            <div class="row justify-content-center">
+                                <div class="col-md-3 p-1">
+                                    <div class="card text-center">
+                                        <img src="image/Rectangle 36.png" class="card-img-top rounded-circle mx-auto mt-3 w-50 h-50"
+                                            alt="Customer 1">
+                                        <div class="card-body">
+                                            <div class="review-icon mt-2">
+                                                <!-- Replace with SVG icons -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-half" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                </svg>
+                                                <!-- End of SVG icons -->
+                                            </div>
+                                            <p class="card-text">"I absolutely love the stylish clothing from this brand! The
+                                                quality is outstanding, and the customer service is top-notch. Can't wait to shop
+                                                here again!"</p>
+                                            <footer class="blockquote-footer">Jessica S.</footer>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-3 p-1">
+                                    <div class="card text-center">
+                                        <img src="image/Rectangle 35.png" class="card-img-top rounded-circle mx-auto mt-3 w-50 h-50"
+                                            alt="Customer 2">
+                                        <div class="card-body">
+                                            <div class="review-icon mt-2">
+                                                <!-- Replace with SVG icons -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                </svg>
+                                                <!-- End of SVG icons -->
+                                            </div>
+                                            <p class="card-text">"The latest collection is a game-changer! Not only are the clothes
+                                                trendy, but they are also incredibly comfortable. Nice Collections of clothing
+                                                materials!"</p>
+                                            <footer class="blockquote-footer">Alex M.</footer>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-3 p-1">
+                                    <div class="card text-center">
+                                        <img src="image/Rectangle 37.png" class="card-img-top rounded-circle mx-auto mt-3 w-50 h-50"
+                                            alt="Customer 3">
+                                        <div class="card-body">
+                                            <div class="review-icon mt-2">
+                                                <!-- Replace with SVG icons -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-half" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                </svg>
+                                                <!-- End of SVG icons -->
+                                            </div>
+                                            <p class="card-text">"I'm impressed by the variety and quality of the clothing. The
+                                                attention to detail in the designs is unmatched. I found my go-to brand for
+                                                fashion-forward pieces!"</p>
+                                            <footer class="blockquote-footer">Emily R.</footer>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-3 p-1">
+                                    <div class="card text-center">
+                                        <img src="image/Rectangle 40.png" class="card-img-top rounded-circle mx-auto mt-3 w-50 h-50"
+                                            alt="Customer 5">
+                                        <div class="card-body">
+                                            <div class="review-icon mt-2">
+                                                <!-- Replace with SVG icons -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-star" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                                </svg>
+                                                <!-- End of SVG icons -->
+                                            </div>
+                                            <p class="card-text">"Fast shipping and great value for money. The clothes exceeded my
+                                                expectations, and I'm already planning my next purchase. Thank you for the wonderful
+                                                experience!"</p>
+                                            <footer class="blockquote-footer">Ryan L.</footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal for displaying user details -->
+            <div class="modal fade" id="userDetailsModal" tabindex="-1" role="dialog" aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="userDetailsModalLabel">User Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Display user details here -->
+                      <div id="userDetails" class="text-center justify-content-center">
+                        <div class="list-group text-center">
+                            <img id="profileImageDisplay" class="rounded-circle img-fluid mx-auto d-block w-50 h-50" alt="Profile Image">
+                            <h2>Welcome!</h2>
+                            <p id="firstNameLabel">First Name: </p>
+                            <p id="lastNameLabel">Last Name: </p>
+                            <p id="emailLabel">Email: </p>
+                            <p id="usernameLabel">Username: </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <!--Cart Modeling-->
+            <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Your cart content goes here -->
+                            <ul class="list-group" id="cartItemList">
+                                <!-- Cart items will be dynamically added here -->
+                             </ul>
+                             <div class="input-group mt-3">
+                                <input type="text" class="form-control" id="promoCodeInput" placeholder="Enter Promo code">
+                                <button type="button" class="btn btn-warning" onclick="redeemPromoCode()">Redeem</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <!-- Checkout form -->
+            <div class="col-md-8">
+                
+    <!--Registration form-->
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Mark" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Otto" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">E-mail address</label>
+            <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please input a correct email address.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Address</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Azhata, Kurudu" required>
+                <div class="valid-feedback">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Address 2</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="validationCustom03"
+                    placeholder="Block 3, Lincoln College, Kurudu" required>
+                <div class="valid-feedback">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="validationCustom03" class="form-label">Phone Number</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="+2348000000000" required>
+                <div class="valid-feedback">
+                    <i class="bi bi-check-lg"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+                <!-- State options dynamically populated here -->
+                <option value="" disabled selected>Select State</option>
+                <!-- ... (options added dynamically in JavaScript) ... -->
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip code" readonly>
+            <div class="invalid-feedback">
+                Please provide a valid zip.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="state-description" class="form-label">State Description</label>
+            <p id="state-description"></p>
+        </div>
+        <hr>
+
+        <!--Payment method-->
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="my-3">
+            <div class="form-check">
+                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                <label class="form-check-label" for="credit">Credit card</label>
+            </div>
+            <div class="form-check">
+                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                <label class="form-check-label" for="debit">Debit card</label>
+            </div>
+            <div class="form-check">
+                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+        </div>
+
+        <div class="row gy-3">
+            <div class="col-md-6">
+                <label for="validationCustom06" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="validationCustom06" placeholder="" required>
+                <small class="text-body-secondary">Full name as displayed on card</small>
+                <div class="invalid-feedback">
+                    Name on card is required
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="validationCustom07" class="form-label">Credit card number</label>
+                <input type="text" class="form-control" id="validationCustom07" placeholder="" required>
+                <div class="invalid-feedback">
+                    Credit card number is required
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label for="validationCustom08" class="form-label">Expiration</label>
+                <input type="text" class="form-control" id="validationCustom08" placeholder="" required>
+                <div class="invalid-feedback">
+                    Expiration date required
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label for="validationCustom09" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="validationCustom09" placeholder="" required>
+                <div class="invalid-feedback">
+                    Security code required
+                </div>
+            </div>
+        </div>
+
+        <hr class="">
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="liveAlertPlaceholder"></div>
+            <button class="btn w-100 btn-warning" type="submit" id="liveAlertBtn">Submit form</button>
+        </div>
+    </form>
+            </div>
+
+            <!-- Cart section -->
+            <div class="col-md-4 p-1">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Cart</h5>
+                        <ul class="list-group" id="visibleCartSection">
+                            <!-- Cart items will be dynamically added here -->
+                        </ul>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" id="promoCodeInput" placeholder="Enter Promo code">
+                            <button type="button" class="btn btn-warning" onclick="redeemPromoCode()">Redeem</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container-fluid bg-dark text-light">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Features</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Features</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">Home</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Features</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#"
+                                class="nav-link p-0 text-body-light text-white">Pricing</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">FAQs</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-light text-white">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-warning" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p><a class="navbar-brand col-md-3 me-0 font-weight-bold d-flex align-items-center" href="#">&copy; 2023 
+                <img src="images2/logo2img.png" class="rounded-circle me-2" style="width: 30px; height: 25px;" alt="">
+                <span class="d-none d-md-inline"><i>Marvyfash</i></span>, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook" />
+                        </svg></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', loadCartFromLocalStorage);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/validation.js"></script>
+    </main>
+</body>
+
+</html>
